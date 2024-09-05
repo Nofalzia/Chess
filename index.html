@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-container">
+        <video id="desktop-video" class="background-video" autoplay muted loop>
+            <source src="BG Desktop.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video id="mobile-video" class="background-video" autoplay muted loop>
+            <source src="BG mobile.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Minimal Down Arrow Button -->
+        <div class="down-button" onclick="scrollToSection('about-chess')">
+            &#x2193; <!-- Downward arrow symbol -->
+        </div>
+    </div>
+
+    <!-- About Chess Section -->
+    <section id="about-chess">
+        <h2>About Chess</h2>
+        <p>
+            Chess is a two-player strategy game played on an 8x8 grid of 64 squares.</p>
+            <img src="board.jpg" alt="chess board">
+           <p> Each player controls an army of 16 pieces and the goal is to checkmate the opponent's king.
+        </p>
+        <h3>Fun Facts About Chess</h3>
+        <ul>
+            <li>The longest chess game theoretically possible is 5,949 moves.</li>
+            <li>Chess is over 1,500 years old, originating in India.</li>
+            <li>The term "checkmate" comes from the Persian phrase "Shah Mat," meaning "the king is dead."</li>
+            <li>There are 318,979,564,000 possible ways to play the first four moves in chess.</li>
+        </ul>
+    </section>
+
+    <!-- Play Chess Section -->
+    <section id="play-chess">
+        <h2>Play Chess</h2>
+        <!-- Content will be added later -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
