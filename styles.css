@@ -63,16 +63,16 @@ section {
 }
 #about-chess h2, #about-chess h3 {
 	text-align: center;
-	font-size: 250%;
+	font-size: 300%;
 	color: #ffffffd3;
 }
 #about-chess img {
 	display: block;
 	margin: 0 auto;
-	max-width: 100%;
+	max-width: 90%;
 	height: auto;
 	box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.1);
-	border-radius: 5px;
+	border-radius: 7.5px;
 }
 #play-chess {
 	background-color: #0A322B;
@@ -119,25 +119,22 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center; 
-    height: 100vh; 
+    align-items: center;
+    height: 100vh;
     padding: 20px;
-    gap: 7.5%; 
+    gap: 7.5%;
     box-sizing: border-box;
-	margin: 10px;
-	margin-bottom: 50%;
-}
-
-p{
-    margin:20px;
+    margin: 10px;
+    margin-bottom: 475%;
 }
 
 .card {
-    background-color: transparent; 
+    background-color: transparent;
     width: 300px;
     height: 200px;
     perspective: 1000px;
     position: relative;
+    margin-bottom: 50%; /* Add some margin between cards */
 }
 
 .card-front, .card-back {
@@ -155,36 +152,36 @@ p{
 }
 
 .card-front {
-	background-color: #ffffff80;
+    background-color: #ffffff80;
     border: 2px solid #FFFFFF;
-	color: #0A322B;
-	z-index: 2;
-	transform: rotateY(0deg);
+    color: #0A322B;
+    z-index: 2;
+    transform: rotateY(0deg);
 }
 
 .card-back {
     background-color: #0A322B;
-    border: 2px solid #FFFFFF; 
+    border: 2px solid #FFFFFF;
     color: #FFFFFF;
     transform: rotateY(180deg);
 }
 
-
 .card.flip .card-front {
-	transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
 }
 
 .card.flip .card-back {
-	transform: rotateY(0deg);
+    transform: rotateY(0deg);
 }
 
 .card:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .card-front, .card-back {
-	transition: transform 0.6s;
+    transition: transform 0.6s;
 }
+
 
 footer {
     background-color: #0A322B;

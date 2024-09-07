@@ -9,12 +9,12 @@
 </head>
 <body>
     <div class="video-container">
-        <video id="desktop-video" class="background-video" autoplay muted loop>
-            <source src="BG Desktop.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
         <video id="mobile-video" class="background-video" autoplay muted loop>
             <source src="BG mobile.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video id="desktop-video" class="background-video" autoplay muted loop>
+            <source src="BG Desktop.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
@@ -30,6 +30,8 @@
             Chess is a two-player strategy game played on an 8x8 grid of 64 squares.</p>
             <img src="board.jpg" alt="chess board">
            <p> Each player controls an army of 16 pieces and the goal is to checkmate the opponent's king.
+            <br><br>
+            The pieces are as follows.
         </p>
        
         <div class="card-container">
@@ -49,12 +51,51 @@
                     <p>Moves in an "L" shape: two squares in one direction and one square perpendicular. Knights can jump over other pieces!</p>
                 </div>
                 <div class="card-back">
-                    <p>Philosophy of the Knight: (Placeholder)</p>
+                    <p> Its erratic path defies norms, urging us to venture off the beaten track and embrace creativity. As the knight alternates between light and dark squares, it mirrors life’s dualities—success and failure, joy and sorrow. Fearless leaps symbolize courage and unconventional choices. Ultimately, the knight embodies our quest for meaning and purpose, inviting us to dance our own enigmatic journey on life’s chessboard.</p>
+                </div>
+            </div>
+
+            <div class="card" id="bishop-card">
+                <div class="card-front">
+                    <h3>The Bishop</h3>
+                    <p>Moves diagonally across the board, staying on the same color square. The bishop embodies spiritual depth, symbolizing faith, intuition, and enlightenment.</p>
+                </div>
+                <div class="card-back">
+                    <p>Just as the bishop's path transcends linear boundaries, our spiritual journey involves seeking higher truths beyond the mundane. The alternating colors represent life's contrasts—darkness and illumination. The bishop encourages us to explore inner wisdom, trust our instincts, and move diagonally toward enlightenment.</p>
                 </div>
             </div>
             
-            <!-- Repeat similar structure for the other chess pieces -->
-        </div>
+            <div class="card" id="rook-card">
+                <div class="card-front">
+                    <h3>The Rook</h3>
+                    <p>Moves horizontally or vertically any number of squares. It's a powerful piece that controls open files and ranks, representing stability and strategic vision.</p>
+                </div>
+                <div class="card-back">
+                    <p>The rook stands tall, unwavering in its purpose. It teaches us about adaptability—how to navigate both straight paths and unexpected turns. Like a castle guarding its walls, the rook reminds us to protect what matters most while maintaining flexibility. It's not just about brute force; it's about calculated movement and seizing opportunities.</p>
+                </div>
+            </div>
+
+            <div class="card" id="queen-card">
+                <div class="card-front">
+                    <h3>The Queen</h3>
+                    <p>Moves horizontally, vertically, or diagonally any number of squares. She combines the power of the rook and the bishop, representing versatility, intelligence, and influence.</p>
+                </div>
+                <div class="card-back">
+                    <p>The queen, regal and commanding, embodies both grace and authority. She teaches us about balance—how to wield strength without arrogance. Like a ruler who listens to her advisors, the queen encourages us to consider multiple perspectives. Her moves are deliberate, strategic, and far-reaching. She reminds us that true leadership involves both vision and empathy.</p>
+                </div>
+            </div>
+            
+            <div class="card" id="king-card">
+                <div class="card-front">
+                    <h3>The King</h3>
+                    <p>Moves one square in any direction. The king is the heart of the kingdom, representing protection, vulnerability, and wisdom.</p>
+                </div>
+                <div class="card-back">
+                    <p>The king, adorned with a crown, carries the weight of responsibility. His steps are deliberate, cautious, and purposeful. He teaches us about leadership—how to lead by example, even when surrounded by threats. Like a wise ruler who consults advisors, the king values counsel and foresight. His survival is paramount, yet he knows that true strength lies in unity and sacrifice.</p>
+                </div>
+            </div>
+            
+             </div>
         
        
         <h3>Fun Facts About Chess</h3>
@@ -67,7 +108,7 @@
     </section>
 
     <section id="play-chess">
-        <h2>Play Chess</h2>
+        <button><h2>Play Chess</h2></button>
     </section>
 
     <footer>
