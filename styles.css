@@ -1,138 +1,187 @@
-/* Import Poppins font */
 body, html {
-    margin: 0;
-    height: 100%;
-    overflow-x: hidden; /* Stop horizontal scrolling */
-    scroll-behavior: smooth;
-    background-color: #0A322B;
-    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
-    color: white; /* Default font color */
+	margin: 0;
+	height: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	background-color: #0A322B;
+	font-family: 'Poppins', sans-serif;
+	color: #FFFFFF;
 }
 
-/* Styling for the video container */
 .video-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 }
-
 .background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: translate(-50%, -50%);
+	display: none;
 }
 
-/* Show desktop video by default */
 #desktop-video {
-    display: block;
+	display: block;
 }
 
-/* Minimal down arrow button */
 .down-button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    color: white;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    animation: bounce 1.5s infinite;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 2rem;
+	color: #FFFFFF;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	animation: bounce 1.5s infinite;
 }
 
-/* Arrow bounce animation */
 @keyframes bounce {
-    0%, 100% {
-        transform: translateX(-50%) translateY(0);
-    }
-    50% {
-        transform: translateX(-50%) translateY(-10px);
-    }
+	0%, 100% {
+		transform: translateX(-50%) translateY(0);
+	}
+	50% {
+		transform: translateX(-50%) translateY(-10px);
+	}
 }
 
-/* Section styling */
 section {
-    padding: 100px 20px;
-    background-color: #0A322B; /* Same green as video background */
-    color: white;
+	padding: 100px 20px;
+	background-color: #0A322B;
+	color: #FFFFFF;
 }
 
 #about-chess {
-    background-color: #0A322B; /* Consistent with video green */
-    margin-top: 50px;
+	background-color: #0A322B;
+	margin-top: 50px;
 }
-
 #about-chess h2, #about-chess h3 {
-    text-align: center;
-    font-size: 250%;
-    color: #ffffffd3; /* Gold color for section titles */
+	text-align: center;
+	font-size: 250%;
+	color: #ffffffd3;
 }
-
 #about-chess img {
-    display: block;
-    margin: 0 auto; /* Centers the image horizontally */
-    max-width: 100%; /* Ensures the image fits within the container */
-    height: auto; /* Maintains the aspect ratio */
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.1); /* Adds a soft white shadow */
-    border-radius: 5px; /* Optional: Slight rounding of the corners */
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+	box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.1);
+	border-radius: 5px;
 }
-
-
 #play-chess {
-    background-color: #0A322B; /* Consistent with video green */
-    margin-top: 50px;
+	background-color: #0A322B;
+	margin-top: 50px;
 }
 
-/* Fun facts styling */
 #about-chess ul {
-    list-style-type: disc;
-    padding-left: 20px;
+	list-style-type: disc;
+	padding-left: 20px;
 }
-
 #about-chess ul li {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
-/* Media query for mobile devices */
 @media (max-width: 768px) {
-    #desktop-video {
-        display: none;
-    }
-
-    #mobile-video {
-        display: block;
-    }
+	#desktop-video {
+		display: none;
+	}
+	#mobile-video {
+		display: block;
+	}
 }
 
-
-
-/* For Webkit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-    width: 8px; /* Narrow width */
+	width: 8px;
 }
-
 ::-webkit-scrollbar-track {
-    background: #0A322B; /* Match the background color */
+	background: #0A322B;
 }
-
 ::-webkit-scrollbar-thumb {
-    background: #ffffff80; /* Semi-transparent white */
-    border-radius: 10px; /* Rounded scrollbar edges */
+	background: #ffffff80;
+	border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-    background: #ffffff; /* Bright white on hover */
+	background: #ffffff;
 }
 
-/* For Firefox */
 * {
-    scrollbar-width: thin; /* Narrow scrollbar */
-    scrollbar-color: #ffffff80 #0A322B; /* Thumb color and background */
+	scrollbar-width: thin;
+	scrollbar-color: #ffffff80 #0A322B;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+    padding: 20px;
+    gap: 10px; 
+    box-sizing: border-box;
+	margin: 10px;
+	margin-bottom: 50%;
+}
+
+p{
+    margin:20px;
+}
+
+.card {
+    background-color: transparent; 
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30% 0%;
+}
+
+.card-front {
+	background-color: #ffffff80;
+    border: 2px solid #FFFFFF;
+	color: #0A322B;
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.card-back {
+    background-color: #0A322B;
+    border: 2px solid #FFFFFF; 
+    color: #FFFFFF;
+    transform: rotateY(180deg);
+}
+
+
+.card.flip .card-front {
+	transform: rotateY(-180deg);
+}
+
+.card.flip .card-back {
+	transform: rotateY(0deg);
+}
+
+.card:hover {
+	cursor: pointer;
+}
+
+.card-front, .card-back {
+	transition: transform 0.6s;
 }
