@@ -94,12 +94,11 @@ section {
 /* About Chess Section */
 #about-chess {
     background-color: #0A322B;
-    margin-top: 50px;
 	padding: 7.5%;
 }
 #about-chess h2, #about-chess h3 {
     text-align: center;
-    font-size: 300%;
+    font-size: 2.75rem;
     color: #ffffffd3;
 	padding: 0%;
 }
@@ -122,7 +121,6 @@ section {
 /* Play Chess Section */
 #play-chess {
     background-color: #0A322B;
-    margin-top: 50px;
 	padding: 5%;
 }
 
@@ -145,7 +143,9 @@ section {
     perspective: 1000px; 
     position: relative;
     cursor: pointer;
-	margin: 5% 0;
+	margin: 5% 0%;
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.5s ease-in-out;
 }
 
 h6 {
@@ -154,10 +154,41 @@ h6 {
    font-size: 100px; /*Makes the peices on the cards bigger*/
 }
 
+/* Slide-in animations */
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card.slide-in-left {
+    animation: slide-in-left 0.6s ease-out forwards;
+}
+
+.card.slide-in-right {
+    animation: slide-in-right 0.6s ease-out forwards;
+}
+
 /* Front and back sides of the card */
 .card-front, .card-back {
     position: absolute;
-    width: 300px;
+    width: auto;
 	height: 350px;
     border-radius: 10px;
     display: flex;
@@ -216,4 +247,98 @@ footer a:hover {
     color: #ffffff;
     text-decoration: underline;
     font-weight: bolder;
+}
+
+/* Play Chess Section */
+#play-chess {
+    background: linear-gradient(0deg, #0a322b, #859995);
+    padding: 5%;
+    text-align: center;
+}
+
+/* Heading */
+#play-chess h3 {
+    font-size: 2.75rem;
+    color: #0A322B;
+    margin-bottom: 20%;
+}
+
+/* Facts Container */
+.facts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Individual Fact */
+.fact {
+    background: linear-gradient(135deg, #0a322b, #1e1e1e);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Fact Icon */
+.fact-icon {
+    font-size: 2rem;
+    color: #f0f0f0; /* Light color for contrast */
+}
+
+/* Button Style */
+.play-chess-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #0a322b, #1e1e1e);
+    color: #ffffff;
+    border: 2px solid #FFFFFF;
+    padding: 10px 50px;
+    font-size: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.play-chess-button:hover {
+    background-color: #123c35;
+}
+
+.play-chess-button h2 {
+    margin: 0;
+}
+
+/* Container for the wave */
+.wave-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #859995; /* Match the wave color to the section background */
+}
+
+/* Style the SVG wave */
+.wave-container svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+    fill: #859995; /* Wave color */
+    transform: rotate(180deg); /* Rotate the wave if needed */
+}
+
+/* Section Styles */
+.section {
+    position: relative;
+    background-color: #859995; /* Adjust background color as needed */
+    color: #FFFFFF;
+    padding: 50px 0;
+}
+
+/* Adjust for alternating sections */
+.section:nth-of-type(even) .wave-container svg {
+    fill: #1E1E1E; /* Alternate wave color if needed */
 }
