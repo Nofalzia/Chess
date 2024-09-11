@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess</title>
+    <script>
+        function isMobile() {
+            // Checks if the screen width is for mobile (you can adjust the width as needed)
+            return window.innerWidth <= 768;
+        }
+
+        window.onload = function() {
+            if (!isMobile()) {
+                // Redirect to desktop version if not on a mobile device
+                window.location.href = "desktop-index.html";
+            }
+        };
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div id="loading-overlay">
+        <div class="loader-content">
+            <h2>Loading<br></h2>&#9820;&#9822;&#9821;&#9819;&#9818;&#9821;&#9822;&#9820;
+        </div>
+    </div>    
+    
     <div class="video-container">
         <video id="mobile-video" class="background-video" autoplay muted loop>
             <source src="BG mobile.mp4" type="video/mp4">
@@ -17,12 +37,12 @@
             <source src="BG Desktop.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-
+    
         <!-- Minimal Down Arrow Button -->
         <div class="down-button" onclick="scrollToSection('about-chess')">
             &#x2193; <!-- Downward arrow symbol -->
         </div>
-    </div>
+    </div>    
 
     <section id="about-chess">
         <h2>About Chess</h2>
@@ -42,7 +62,8 @@
                     <p>Moves one square forwards per move. On its first move, a pawn can move two squares. It captures diagonally and can promote to a better piece upon reaching the end of the board!</p>
                 </div>
                 <div class="card-back">
-                    <p>Starting at the forefront, the pawn symbolizes personal growth—moving forward step by step. Pawns sacrifice themselves for the greater cause, reminding us of the power of patience and potential. They embody life’s struggles and triumphs, urging us to make meaningful moves on the chessboard of life.</p>
+                    <p>Starting at the forefront, the pawn symbolizes personal growth—moving forward step by step. Pawns sacrifice themselves for the greater cause, reminding us of the power of patience
+                         and potential. They embody life’s struggles and triumphs, urging us to make meaningful moves on the chessboard of life.</p>
                 </div>
             </div>
             
@@ -53,7 +74,8 @@
                     <h6> &#9816; </h6>
                 </div>
                 <div class="card-back">
-                    <p> The knight’s erratic path on the chessboard defies norms, urging us to embrace creativity. Its fearless leaps symbolize courage and unconventional choices. Ultimately, the knight embodies our quest for meaning and purpose. </p>
+                    <p> The knight’s erratic path on the chessboard defies norms, urging us to embrace creativity. Its fearless leaps symbolize courage and unconventional choices.
+                         Ultimately, the knight embodies our quest for meaning and purpose. </p>
                 </div>
             </div>
 
@@ -61,21 +83,25 @@
             <div class="card" id="bishop-card">
                 <div class="card-front">
                     <h6> &#9815; </h6>
-                    <p>Moves diagonally across the board, staying on the same color square. The bishop embodies spiritual depth, symbolizing faith, intuition, and enlightenment.</p>
+                    <p>Moves diagonally across the board, staying on the same colored square.</p>
                 </div>
                 <div class="card-back">
-                    <p>Just as the bishop's path transcends linear boundaries, our spiritual journey involves seeking higher truths beyond the mundane. The alternating colors represent life's contrasts—darkness and illumination. The bishop encourages us to explore inner wisdom, trust our instincts, and move diagonally toward enlightenment.</p>
+                    <p>Just as the bishop's path transcends linear boundaries, our spiritual journey involves seeking higher truths beyond the mundane. 
+                        The alternating colors represent life's contrasts—darkness and illumination. The bishop encourages us to explore inner wisdom, trust our instincts, and move 
+                        diagonally toward enlightenment.</p>
                 </div>
             </div>
             
             <h3>The Rook</h3>
             <div class="card" id="rook-card">
                 <div class="card-front">
-                    <p>Moves horizontally or vertically any number of squares. It's a powerful piece that controls open files and ranks, representing stability and strategic vision.</p>
+                    <p>Moves horizontally or vertically any number of squares. It's a powerful piece that controls open files and ranks.</p>
                     <h6> &#9814; </h6>
                 </div>
                 <div class="card-back">
-                    <p>The rook stands tall, unwavering in its purpose. It teaches us about adaptability—how to navigate both straight paths and unexpected turns. Like a castle guarding its walls, the rook reminds us to protect what matters most while maintaining flexibility. It's not just about brute force; it's about calculated movement and seizing opportunities.</p>
+                    <p>The rook stands tall, unwavering in its purpose. It teaches us about adaptability—how to navigate both straight paths and unexpected turns.
+                         Like a castle guarding its walls, the rook reminds us to protect what matters most while maintaining flexibility. It's not just about brute force;
+                          it's about calculated movement and seizing opportunities.</p>
                 </div>
             </div>
 
@@ -83,7 +109,7 @@
             <div class="card" id="queen-card">
                 <div class="card-front">
                     <h6> &#9813; </h6>
-                    <p>Moves horizontally, vertically, or diagonally any number of squares. She combines the power of the rook and the bishop, representing versatility, intelligence, and influence.</p>
+                    <p>Moves horizontally, vertically, or diagonally any number of squares. She combines the power of the rook and the bishop.</p>
                 </div>
                 <div class="card-back">
                     <p>The queen, regal and commanding, embodies both grace and authority. She teaches us about balance—how to wield strength without arrogance. Like a ruler who listens to her advisors, the queen encourages us to consider multiple perspectives. Her moves are deliberate, strategic, and far-reaching. She reminds us that true leadership involves both vision and empathy.</p>
