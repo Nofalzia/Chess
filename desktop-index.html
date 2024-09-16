@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+
+    <link rel="stylesheet" href="desktop styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="loading-overlay">
+        <div class="loader-content">
+            <h2>Loading<br></h2>&#9820;&#9822;&#9821;&#9819;&#9818;&#9821;&#9822;&#9820;
+        </div>
+    </div>    
+    
+    <div class="video-container">
+        <video id="mobile-video" class="background-video" autoplay muted loop>
+            <source src="BG mobile.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video id="desktop-video" class="background-video" autoplay muted loop>
+            <source src="BG Desktop.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+        <!-- Minimal Down Arrow Button -->
+        <div class="down-button" onclick="scrollToSection('about-chess')">
+            &#x2193; <!-- Downward arrow symbol -->
+        </div>
+    </div>    
+
+    <section id="about-chess">
+        
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Chess</h2>
+                <br>
+                <p>Chess is a two-player strategy game played on an 8x8 grid of 64 squares. Each player controls an army of 16 pieces and the goal is to checkmate the opponent's king.</p>
+                <br>
+                <p>The pieces are as follows:</p>
+            </div>
+            <div class="about-image">
+                <img src="board.jpg" alt="chess board">
+            </div>
+        </div>
+    </section>
+    
+       
+    <div class="card-container">
+        <div class="card" id="pawn-card">
+            <div class="card-front">
+                <h6> &#9817; </h6>
+                <p>Moves 1 square forward, 2 on its first move. Captures diagonally & promotes upon reaching the board's end.</p>
+            </div>
+            <div class="card-back">
+                <p>The pawn symbolizes growth and patience, advancing step by step and sacrificing for the greater good. It embodies life’s struggles and triumphs, encouraging meaningful moves.</p>
+            </div>
+        </div>
+    
+        <div class="card" id="knight-card">
+            <div class="card-front">
+                <h6> &#9816; </h6>
+                <p>Moves in an "L" shape: two squares in one direction and one square perpendicular. Knights can jump over pieces!</p>
+            </div>
+            <div class="card-back">
+                <p>The knight's unique path symbolizes creativity and courage, urging unconventional choices and a quest for meaning.</p>
+            </div>
+        </div>
+    
+        <div class="card" id="bishop-card">
+            <div class="card-front">
+                <h6> &#9815; </h6>
+                <p>Only moves diagonally across the board, staying on the same colored square.</p>
+            </div>
+            <div class="card-back">
+                <p>The bishop’s diagonal movement represents seeking higher truths and inner wisdom, navigating contrasts in life’s journey.</p>
+            </div>
+        </div>
+    
+        <div class="card" id="rook-card">
+            <div class="card-front">
+                <h6> &#9814; </h6>
+                <p>Moves horizontally or vertically any number of squares. It's a powerful piece that controls open files and ranks.</p>
+            </div>
+            <div class="card-back">
+                <p>The rook teaches adaptability and strategic movement, protecting what matters while remaining flexible.</p>
+            </div>
+        </div>
+    
+        <div class="card" id="queen-card">
+            <div class="card-front">
+                <h6> &#9813; </h6>
+                <p>Moves horizontally, vertically, or diagonally any number of squares. She combines the power of the rook and the bishop.</p>
+            </div>
+            <div class="card-back">
+                <p>The queen embodies grace and authority, teaching balance and empathy. Her strategic moves reflect leadership that values multiple perspectives.</p>
+            </div>
+        </div>
+    
+        <div class="card" id="king-card">
+            <div class="card-front">
+                <h6> &#9812; </h6>
+                <p>Moves one square in any direction. The king is the heart of the kingdom, representing protection, vulnerability, and wisdom.</p>
+            </div>
+            <div class="card-back">
+                <p>The king represents leadership and responsibility, guiding by example and valuing counsel. His survival signifies the importance of unity and sacrifice.</p>
+            </div>
+        </div>
+    </div>
+    
+
+<!-- SVG Wave -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#859995" fill-opacity="1" d="M0,224L48,224C96,224,192,224,288,240C384,256,480,288,576,282.7C672,277,768,235,864,208C960,181,1056,171,1152,181.3C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+<!-- Section for Fun Facts -->
+<section id="play-chess">
+    <h3>Fun Facts</h3>
+    <div class="facts-container">
+        <div class="fact">
+            <div class="fact-icon">&#9821;</div> <!-- Black bishop icon -->
+            <p>The longest chess game theoretically possible is 5,949 moves.</p>
+        </div>
+        <div class="fact">
+            <div class="fact-icon">&#9820;</div> <!-- Black rook icon -->
+            <p>Chess is over 1,500 years old, originating in India.</p>
+        </div>
+        <div class="fact">
+            <div class="fact-icon">&#9822;</div> <!-- Black knight icon -->
+            <p>The term "checkmate" comes from the Persian phrase "Shah Mat," meaning "the king is dead."</p>
+        </div>
+        <div class="fact">
+            <div class="fact-icon">&#9822;</div> <!-- Black knight icon -->
+            <p>There are 318,979,564,000 possible ways to play the first four moves in chess.</p>
+        </div>
+    </div>
+    <a href="https://www.chess.com" target="_blank" class="play-chess-button">
+        <h2>Play Chess</h2>
+    </a>
+</section>
+
+
+
+    <footer>
+        Made By <a href="mailto:nofalzia4s@gmail.com">Nofal Zia</a> | All Rights Reserved © 2024
+        <br>
+        This website contains a 3D Model sourced from <a href="https://app.spline.design/@auroregmbt" target="_blank">auroregmbt on Spline</a>. 
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
