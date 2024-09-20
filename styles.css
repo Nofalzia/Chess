@@ -202,7 +202,7 @@ h6 {
 
 /* Front side of the card */
 .card-front {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     border: 2px solid #FFFFFF;
     color: #0A322B;
 }
@@ -251,7 +251,7 @@ footer a:hover {
 
 /* Play Chess Section */
 #play-chess {
-    background: linear-gradient(0deg, #0a322b, #859995);
+    background: linear-gradient(0deg, #0a322b, #CED6D5);
     padding: 5%;
     text-align: center;
 }
@@ -259,7 +259,7 @@ footer a:hover {
 /* Heading */
 #play-chess h3 {
     font-size: 2.75rem;
-    color: #ffffff;
+    color: #0A322B;
     margin-bottom: 20%;
 }
 
@@ -273,11 +273,9 @@ footer a:hover {
 
 /* Individual Fact */
 .fact {
-    background: linear-gradient(135deg, #ffffff6d, #ffffffad);
-    border: #FFFFFF 2px solid;
+    background: linear-gradient(135deg, #CED6D5, #CED6D5);
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px; 
     color: #000000;
     display: flex;
     align-items: center;
@@ -293,9 +291,8 @@ footer a:hover {
 /* Button Style */
 .play-chess-button {
     display: inline-block;
-    background: linear-gradient(135deg, #00000000, #1e1e1e00);
-    color: #ffffff;
-    border: 2px solid #FFFFFF;
+    background: linear-gradient(135deg, #CED6D5, #CED6D5);
+    color: #0A322B;
     padding: 20px 90px;
     font-size: 1rem;
     border-radius: 10px;
@@ -304,10 +301,6 @@ footer a:hover {
     transition: background-color 0.3s ease;
     margin-top: 20%;
     margin-bottom: 20%;
-}
-
-.play-chess-button:hover {
-    background-color: #123c35;
 }
 
 .play-chess-button h2 {
