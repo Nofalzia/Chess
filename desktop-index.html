@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess</title>
+  
+    <script>
+        function isMobile() {
+            // Checks if the screen width is for mobile (you can adjust the width as needed)
+            return window.innerWidth >= 480;
+        }
+
+        window.onload = function() {
+            if (!isMobile()) {
+                // Redirect to desktop version if not on a mobile device
+                window.location.href = "index.html";
+            }
+        };
+    </script>
 
     <link rel="stylesheet" href="desktop styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,8 +26,9 @@
 
     <div id="loading-overlay">
         <div class="loader-content">
-            <h2>Loading<br></h2>&#9820;&#9822;&#9821;&#9819;&#9818;&#9821;&#9822;&#9820;
-        </div>
+            <h2 style="color: white;">Loading<br></h2>
+<span style="color: white;">&#9820;&#9822;&#9821;&#9819;&#9818;&#9821;&#9822;&#9820;</span>
+</div>
     </div>    
     
     <div class="video-container">
