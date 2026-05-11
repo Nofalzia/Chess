@@ -1,6 +1,6 @@
 # Chess Themed Website
 
-**Live demo:** [Not deployed yet]
+**Live demo:** https://chessbynofal.netlify.app/index.html
 
 ## What it does
 This website is an immersive, visual tribute to the game of chess. It features high-quality 3D animations, interactive educational cards about chess pieces, and fun facts, all wrapped in a premium, responsive design.
