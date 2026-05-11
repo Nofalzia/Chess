@@ -58,9 +58,3 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }, 10000); 
 });
-
-document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('flipped');
-    });
-});
